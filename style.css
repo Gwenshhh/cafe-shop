@@ -12,13 +12,6 @@ p{
     color:#333;
     font-size:20px;
 }
-nav{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #5c3d2e;
-    padding: 15px 40px;
-}
 
 .logo{
     color: white;
