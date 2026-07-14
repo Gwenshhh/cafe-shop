@@ -3,102 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Cafe Shop</title>
-
+    <title>The Daily Grind | Premium Cafe</title>
+    <!--Google Fonts for a premium look-->
+    <link href="https://fonts.googleapis.com/css2?family=playfair+Display:wght@600;800&family=poppins:wght@300;400;600&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <div class="logo">🧋Cafe Shop</div>
+    <!--Header / Navigation-->
+    <header class="navbar">
+        <div class="logo">☕Cafe Shop</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About & careers</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <!--Hero Section-->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome To Our Cafe</h1>
+            <p>Fresh Coffee ∙ Bubble Tea ∙ Snacks ∙ Desserts</p>
+            <a href="menu.html" class="btn-primary">Explore Our Menu</a>
+        </div>
+    </section>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a herf="#">Menu</a></li>
-        <li><a herf="#">About</a></li>
-        <li><a herf="#">Contact</a></li>
-    </ul>
-</nav>    
-<section class="hero" id="home">
-    <h1>Welcome To My Cafe</h1>
-    <p>Fresh Coffee | Bubble Tea | Snacks | Desserts</p>
-    <a herf="#" class="btn">Explore Menu</a>
-</section>
-<section class="categories" id="categories">
-    <div class="card">
-        <h2>☕ Coffee</h2>
-        <p>Freshly brewed coffee.</p>
-    </div>
-<div class="card">
-    <h2>🧋 Bubble Tea</h2>
-    <p>Refreshing boba drinks.</p>
-</div>
-<div class="card">
-    <h2>🍰 Desserts</h2>
-    <p>Sweet cakes and pastries.</p>
-</div>    
-<div class="card">
-    <h2>🥪 Snacks</h2>
-    <p>Quick bites and sandwiches.</p>
-</div>
-<section class="about" id="about">
-    <h2>About Us</h2>
-    <p>
-        Welcome to Cafe Shop! We serve freshly brewed coffee,
-        delicious bubble tea ,tasty snacks ,and homemade desserts in a warm and relaxing atmosphere
-    </p>
-</section>
-<section class="why-us">
-    <h2>Why Choose Us?</h2>
-    <div class="features">
-        <div class="feature">
-            <h3>☕Fresh Coffee</h3>
-            <p>Made from premium coffee beans every day.</p>
-        </div> 
-        <div class="feature">
-            <h3>🧋Quality Bubble Tea</h3>
-            <p>Fresh ingredients with delicious flavors.</p>
+    <!--Categories Section-->
+    <section id="menu" class="section-container">
+        <h2 class="section-title">Our Specialties</h2>
+        <div class="grid-4-col">
+            <div class="card interactive-card">
+                <span class="card-icon">☕</span>
+                <h3>Coffee</h3>
+                <p>Freshly brewed premium beans crafted by master baristas.</p>
+            </div>
+            <div class="card interactive-card">
+                <span class="card-icon">🧋</span>
+                <h3>Bubble Tea</h3>
+                <p>Refreshing, authentic boba drinks with customizable sweetness.</p>
+            </div>
+            <div class="card interactive-card">
+                <span class="card-icon">🍰</span>
+                <h3>Desserts</h3>
+                <p>Sweet, artisanal cakes and pastries baked freshly daily.</p>
+            </div>
+            <div class="card interactive-card">
+                <span class="card-icon">🥪</span>
+                <h3>Snacks</h3>
+                <p>Quick, delicious bites and warm sandwiches for anytime hunger</p>
+            </div>
         </div>
-        <div class="feature">
-            <h3>😊 Friendly Service</h3>
-            <p>Our team is always ready to serve you.</p>
-        </div>
-    </div>
-</section>
-</section>
-<section class="reviews">
-    <h2>Customer Reviews</h2>
-    <div class="review container">
-        <div class="review-card">
-        <h3>⭐⭐⭐⭐⭐</h3>
-        <p>"The coffee is amazing and the atomsphere is so relaxing!"</p>
-        <h4>- Hamza</h4>
-        </div>
-        <div class="review-card">
-            <h3>⭐⭐⭐⭐⭐</h3>
-            <p>"Best Bubble Tea in town.Highly recommended!"</p>
-            <h4>- Azrel</h4>
-        </div>
-        <div class="review-card">
-            <h3>⭐⭐⭐⭐⭐</h3>
-            <p>"Delicious desserts and friendly staff."</p>
-            <h4>- vamika</h4>
-        </div>
-    </div>
-</section>
-<section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>📍 Pollachi,Tamil Nadu</p>
-    <p>📞 +91 9876543210</p>
-    <p>✉️ cafeshop@gmail.com</p>
+    </section>
 
-    <a herf="#" class="btn"> Contact Now</a> 
-</section>
-<footer>
-    <h3>☕ Cafe Shop</h3>
-    <p>Fresh Coffee | Bubble Tea | Snacks | Desserts</p>
-    <p>&copy; 2026 Cafe Shop.All Rights Reserved.</p>
-<button id="topBtn">⬆</button>
-</footer>
-    <script src="script.js"></script> 
+    <!--About & why choose us-->
+    <section id="about" class="section-container bg-light">
+        <div class="about-wrapper">
+            <div class="about-text text-center">
+                <h2 class="section-title">About Us</h2>
+                <p class="lead-text">We serve freshly brewed coffee, delicious bubble tea, tasty snacks, and homemade desserts in a warm and relaxing atmosphere designed to feel like home.</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-item">
+                    <h4>✨ Fresh Coffee</h4>
+                    <p>Made from premium organic coffee beans sourced responsibly every day.</p>
+                </div>
+                <div class="why-item">
+                    <h4>✨ Quality Boba</h4>
+                    <p>Fresh ingredients with authentic, delicious flavor choices.</p>
+                </div>
+                <div class="why-item">
+                    <h4>✨ Friendly Service</h4>
+                    <p>Our enthusiastic team is always ready to make your day brighter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Testimonials Section-->
+    <section class="section-contianer">
+        <h2 class="section-title">Customer Review</h2>
+        <div class="grid-3-col">
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The coffee is incredible and the atmosphere is so relaxing! My absolute favourite weekend spot."</p>
+                <span class="reviewer">-Harsha</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Best Bubble Tea in town hands down.Highly recommended the taro flavour!"</p>
+                <span class="reviewer">-Azrel</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Delicious desserts and genuinely friendly staff.A staple neighborhood cafe."</p>
+                <span class="reviewer">-Vamika</span>
+            </div>
+        </div>
+    </section>
+
+    <!--contact & footer section-->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>📍 Pollachi, TamilNadu</p>
+            <p>📞 +91 9876543210</p>
+            <p>✉️ cafeshop@hotmail.com</p>
+            <button class="btn-secondary">Contact Now</button>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cafe Shop. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
