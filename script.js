@@ -1,42 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-    
-    // ==========================================
-    // 1. DYNAMIC NAVBAR EFFECTS
-    // ==========================================
-    const navbar = document.querySelector(".navbar");
-    
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            navbar.style.padding = "12px 10%";
-            navbar.style.background = "rgba(255, 255, 255, 0.95)";
-            navbar.style.backdropFilter = "blur(10px)";
-            navbar.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.08)";
-        } else {
-            navbar.style.padding = "20px 10%";
-            navbar.style.background = "#ffffff";
-            navbar.style.backdropFilter = "none";
-            navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.05)";
-        }
+document.addEventListener('DOMContentLoaded', () => {
+  // 3D Card Hover Physics
+  const tiltCards = document.querySelectorAll('[data-tilt]');
+  tiltCards.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const rotateX = (-y / rect.height) * 12;
+      const rotateY = (x / rect.width) * 12;
+      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
     });
 
-    // ==========================================
-    // 2. SMOOTH SCROLL REVEAL (Cards Lift-up Effect)
-    // ==========================================
-    const revealElements = document.querySelectorAll(".card, .why-item, .review-card, .menu-item-card");
-
-    const revealOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
     });
+  });
 
-    revealElements.forEach(element => {
-        element.classList.add("reveal-hidden");
-        revealOnScroll.observe(element);
+  // FAQs Accordion Logic
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      faqItems.forEach((i) => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
     });
+  });
 });

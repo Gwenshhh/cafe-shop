@@ -1,25 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Cafe Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | MY.CAFÉ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-wrap { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 2; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .gallery-tile {
+      position: relative;
+      height: 340px;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-tile:hover img {
+      transform: scale(1.08);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 7, 6, 0.9) 0%, transparent 60%);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-tile:hover .gallery-overlay {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">☕ Cafe Shop</div>
-        <nav><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About & Careers</a><a href="gallery.html" class="active">Gallery</a><a href="faqs.html">FAQs</a><a href="contact.html">Contact</a></nav>
-    </header>
 
-    <section class="section-container">
-        <h2 class="section-title">Our Space & Creations</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=500" alt="Cafe Interior"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=500" alt="Latte Art"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=500" alt="Cake Specialty"></div>
+  <div class="glow-sphere sphere-top"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo luxury-title">MY<span>.</span>CAFÉ</a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="gallery.html" class="active">GALLERY</a></li>
+      <li><a href="faqs.html">FAQS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">BOOK TABLE</a>
+  </nav>
+
+  <div class="gallery-wrap">
+    <div style="text-align: center;">
+      <div class="live-pill"><span class="pulse"></span> REEL & AMBIENCE CLIPS</div>
+      <h1 class="luxury-title" style="font-size: 3rem;">THE VISUAL FEED</h1>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-tile glass-card" data-tilt>
+        <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=700&q=80" alt="Slow pour">
+        <div class="gallery-overlay">
+          <span style="font-size: 0.75rem; color: var(--accent-gold); text-transform: uppercase;">Rituals</span>
+          <h3 class="luxury-title">Slow Drip Extraction</h3>
         </div>
-    </section>
+      </div>
+
+      <div class="gallery-tile glass-card" data-tilt>
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Cardamom bake">
+        <div class="gallery-overlay">
+          <span style="font-size: 0.75rem; color: var(--accent-gold); text-transform: uppercase;">Oven Daily</span>
+          <h3 class="luxury-title">Flaky Cardamom Crust</h3>
+        </div>
+      </div>
+
+      <div class="gallery-tile glass-card" data-tilt>
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Nitro Brew">
+        <div class="gallery-overlay">
+          <span style="font-size: 0.75rem; color: var(--accent-gold); text-transform: uppercase;">Cold Bar</span>
+          <h3 class="luxury-title">Velvet Nitrogen Cascade</h3>
+        </div>
+      </div>
+
+      <div class="gallery-tile glass-card" data-tilt>
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80" alt="Espresso Bar">
+        <div class="gallery-overlay">
+          <span style="font-size: 0.75rem; color: var(--accent-gold); text-transform: uppercase;">Atmosphere</span>
+          <h3 class="luxury-title">Quiet Morning Light</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 My Café. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

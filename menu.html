@@ -1,97 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu | Cafe Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Menu | MY.CAFÉ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .menu-wrap { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 2; }
+    .filters { display: flex; justify-content: center; gap: 1rem; margin: 2.5rem 0 3.5rem; }
+    .filter-btn {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 0.65rem 1.8rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--accent-gold);
+      color: #080706;
+      border-color: var(--accent-gold);
+      font-weight: 700;
+    }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 2rem; }
+    .menu-img { height: 210px; width: 100%; object-fit: cover; }
+    .menu-body { padding: 1.5rem; }
+    .menu-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
+    .price { color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; }
+  </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">☕ Cafe Shop</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html" class="active">Menu</a>
-            <a href="about.html">About & Careers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="faqs.html">FAQs</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <div class="glow-sphere sphere-top"></div>
 
-    <section class="menu-scroll-section banner-coffee">
-        <div class="menu-section-title-box">
-            <h2>01. Artisanal Coffee</h2>
-            <p>Crafted carefully from single-origin organic beans.</p>
-        </div>
-        <div class="section-container">
-            <div class="menu-grid">
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">☕</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Espresso Macchiato</h3><span class="price">$3.50</span></div><p>Rich espresso stained with a dollop of warm, velvety frothed milk.</p></div>
-                </div>
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">☕</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Vanilla Cold Brew</h3><span class="price">$4.25</span></div><p>Slow-steeped iced coffee infused with house-made premium vanilla bean syrup.</p></div>
-                </div>
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">☕</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Sea Salt Caramel Latte</h3><span class="price">$4.95</span></div><p>Signature espresso mixed with buttery caramel syrup and topped with sea salt cream.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <nav class="navbar">
+    <a href="index.html" class="logo luxury-title">MY<span>.</span>CAFÉ</a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="menu.html" class="active">MENU</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="faqs.html">FAQS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">BOOK TABLE</a>
+  </nav>
 
-    <section class="menu-scroll-section banner-boba">
-        <div class="menu-section-title-box">
-            <h2>02. Authentic Bubble Tea</h2>
-            <p>Refreshing house brews served with signature slow-cooked tapioca.</p>
-        </div>
-        <div class="section-container">
-            <div class="menu-grid">
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">🧋</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Classic Brown Sugar Boba</h3><span class="price">$5.50</span></div><p>Authentic Taiwanese milk tea layered with rich brown sugar caramelized tapioca pearls.</p></div>
-                </div>
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">🧋</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Uji Matcha Milk Tea</h3><span class="price">$5.95</span></div><p>Premium ceremonial grade Japanese matcha whisked perfectly with organic milk.</p></div>
-                </div>
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">🧋</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Mango Passionfruit Green Tea</h3><span class="price">$5.25</span></div><p>A bright jasmine green tea base infused with real tropical fruit purees and aloe vera cubes.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="menu-wrap">
+    <div style="text-align: center;">
+      <div class="live-pill"><span class="pulse"></span> ARTISANAL TASTING NOTES</div>
+      <h1 class="luxury-title" style="font-size: 3rem;">THE CURATED LINEUP</h1>
+    </div>
 
-    <section class="menu-scroll-section banner-dessert">
-        <div class="menu-section-title-box">
-            <h2>03. Artisanal Patisserie & Bites</h2>
-            <p>Baked fresh daily by our master pastry chefs.</p>
-        </div>
-        <div class="section-container">
-            <div class="menu-grid">
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">🍰</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Matcha Mille Crêpe Cake</h3><span class="price">$6.00</span></div><p>Twenty layers of paper-thin crêpes separated by light Uji matcha pastry cream.</p></div>
-                </div>
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">🍰</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Classic Tiramisu</h3><span class="price">$6.50</span></div><p>Ladyfingers soaked in our house espresso, layered with whipped mascarpone cream.</p></div>
-                </div>
-                <div class="menu-item-card">
-                    <span class="menu-item-emoji">🥪</span>
-                    <div class="menu-item-info"><div class="menu-item-header"><h3>Avocado Sourdough Toast</h3><span class="price">$7.50</span></div><p>Crushed artisan avocados, chili flakes, and microgreens on toasted sourdough bread.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="brews">Brews</button>
+      <button class="filter-btn" data-filter="bakes">Bakes</button>
+    </div>
 
-    <footer class="footer"><p>&copy; 2026 Cafe Shop. All Rights Reserved.</p></footer>
-    <script src="script.js"></script>
-    <script src="menu-script.js"></script>
+    <div class="menu-grid">
+      <!-- Item 1 -->
+      <div class="glass-card menu-grid-item" data-tilt data-category="brews">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" class="menu-img" alt="Nitro Cold Kaapi" />
+        <div class="menu-body">
+          <div class="menu-header">
+            <h3 class="luxury-title">Kaapi Nitro Cold</h3>
+            <span class="price">₹190</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Slow-extracted chicory blend infused with nitrogen micro-foam.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="glass-card menu-grid-item" data-tilt data-category="bakes">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" class="menu-img" alt="Cardamom Bun" />
+        <div class="menu-body">
+          <div class="menu-header">
+            <h3 class="luxury-title">Spiced Cardamom Bun</h3>
+            <span class="price">₹160</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Flaky layered dough infused with freshly stone-crushed cardamom.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="glass-card menu-grid-item" data-tilt data-category="brews">
+        <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=700&q=80" class="menu-img" alt="Filter Coffee" />
+        <div class="menu-body">
+          <div class="menu-header">
+            <h3 class="luxury-title">Brass Filter Drip</h3>
+            <span class="price">₹140</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Traditional high-roasted blend with velvety whole froth.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="glass-card menu-grid-item" data-tilt data-category="bakes">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" class="menu-img" alt="Wild Sourdough" />
+        <div class="menu-body">
+          <div class="menu-header">
+            <h3 class="luxury-title">Wild Sourdough Toast</h3>
+            <span class="price">₹210</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">48-hour fermented rustic loaf served with churned grass-fed butter.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 My Café. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="menu-script.js"></script>
 </body>
 </html>

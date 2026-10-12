@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us & Careers | Cafe Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | MY.CAFÉ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-wrap { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 2; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+    .about-img-box { height: 460px; border-radius: 24px; overflow: hidden; border: 1px solid var(--border-subtle); }
+    .about-img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 4rem; }
+    .pillar-card { padding: 2rem; border-radius: 20px; }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">☕ Cafe Shop</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html" class="active">About & Careers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="faqs.html">FAQs</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="section-container text-center">
-        <h2 class="section-title">Our Story</h2>
-        <p class="lead-text" style="max-width: 700px; margin: 0 auto 40px auto;">Founded with the simple mission of bringing people together over exceptional drinks. Every bean is carefully sourced, and every pastry is handmade with love.</p>
-    </section>
+  <div class="glow-sphere sphere-top"></div>
 
-    <section class="section-container bg-light">
-        <h2 class="section-title">Join Our Team</h2>
-        <p class="text-center" style="margin-bottom: 30px;">We're always looking for passionate baristas, bakers, and floor staff!</p>
-        
-        <div class="jobs-list" style="max-width: 600px; margin: 0 auto;">
-            <div class="job-card" style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                    <h3>Senior Barista</h3>
-                    <span style="background: #e8efe9; color: #2e7d32; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem;">Full-Time</span>
-                </div>
-                <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Experience with manual espresso machines required. Passion for latte art is a big plus!</p>
-                <a href="mailto:careers@cafeshop.com" class="btn-primary" style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">Apply Now</a>
-            </div>
-        </div>
-    </section>
+  <nav class="navbar">
+    <a href="index.html" class="logo luxury-title">MY<span>.</span>CAFÉ</a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="faqs.html">FAQS</a></li>
+      <li><a href="about.html" class="active">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">BOOK TABLE</a>
+  </nav>
 
-    <footer class="footer"><p>&copy; 2026 Cafe Shop. All Rights Reserved.</p></footer>
+  <div class="about-wrap">
+    <div style="text-align: center;">
+      <div class="live-pill"><span class="pulse"></span> OUR HERITAGE & CRAFT</div>
+      <h1 class="luxury-title" style="font-size: 3rem;">THE PHILOSOPHY</h1>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <h2 class="luxury-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Rooted in Tradition, <br/><span class="gold-gradient-text">Refined for Today</span></h2>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+          MY.CAFÉ was created to honor the authentic slow-drip rituals of South Indian filter decoction, marrying traditional warmth with artisanal pastry and sourdough craft.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8;">
+          Every morning begins before sunrise—slow decoctions steeping drop by drop, and sourdough loaves baking until golden brown and crackling.
+        </p>
+      </div>
+
+      <div class="glass-card about-img-box" data-tilt>
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Barista pour" />
+      </div>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="glass-card pillar-card">
+        <span style="font-size: 1.8rem; display: block; margin-bottom: 1rem;">🌱</span>
+        <h3 class="luxury-title" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Micro-Lot Sourcing</h3>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Direct estate-sourced Arabica beans from shade-grown slopes.</p>
+      </div>
+      <div class="glass-card pillar-card">
+        <span style="font-size: 1.8rem; display: block; margin-bottom: 1rem;">⏳</span>
+        <h3 class="luxury-title" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Slow Extraction</h3>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">Precision temperature control and gravity-filtered patience.</p>
+      </div>
+      <div class="glass-card pillar-card">
+        <span style="font-size: 1.8rem; display: block; margin-bottom: 1rem;">✨</span>
+        <h3 class="luxury-title" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Sensory Space</h3>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">A modern moody haven designed for intimate talks and peaceful pauses.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 My Café. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,122 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>The Daily Grind | Premium Cafe</title>
-    <!--Google Fonts for a premium look-->
-    <link href="https://fonts.googleapis.com/css2?family=playfair+Display:wght@600;800&family=poppins:wght@300;400;600&display=swap"rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY.CAFÉ | Artisanal Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 5rem;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      min-height: calc(100vh - 150px);
+    }
+    .hero-main-title {
+      font-size: 4rem;
+      line-height: 1.05;
+      font-weight: 900;
+      margin-bottom: 1.25rem;
+      color: #fff;
+    }
+    .hero-subtext {
+      color: #9c9588;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 2.2rem;
+    }
+    .hero-btn-row { display: flex; gap: 1.25rem; margin-bottom: 3.5rem; }
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-number { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 700; color: #fff; }
+    .stat-label { font-size: 0.75rem; color: #837c70; text-transform: uppercase; }
+    .stat-line { width: 1px; height: 35px; background: rgba(255,255,255,0.1); }
+    .main-visual-card {
+      position: relative;
+      height: 520px;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7);
+    }
+    .hero-img { width: 100%; height: 100%; object-fit: cover; }
+    .floating-badge {
+      position: absolute;
+      background: rgba(20, 18, 15, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-top { top: 25px; right: 15px; }
+    .badge-bottom { bottom: 30px; left: 15px; }
+    .marquee-strip {
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(255,255,255,0.02);
+      padding: 1rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 25s linear infinite;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.25em;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (max-width: 992px) {
+      .hero-wrapper { grid-template-columns: 1fr; }
+      .hero-main-title { font-size: 3rem; }
+    }
+  </style>
 </head>
 <body>
-    <!--Header / Navigation-->
-    <header class="navbar">
-        <div class="logo">☕Cafe Shop</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About & careers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="faqs.html">FAQs</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <!--Hero Section-->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome To Our Cafe</h1>
-            <p>Fresh Coffee ∙ Bubble Tea ∙ Snacks ∙ Desserts</p>
-            <a href="menu.html" class="btn-primary">Explore Our Menu</a>
-        </div>
-    </section>
 
-    <!--Categories Section-->
-    <section id="menu" class="section-container">
-        <h2 class="section-title">Our Specialties</h2>
-        <div class="grid-4-col">
-            <div class="card interactive-card">
-                <span class="card-icon">☕</span>
-                <h3>Coffee</h3>
-                <p>Freshly brewed premium beans crafted by master baristas.</p>
-            </div>
-            <div class="card interactive-card">
-                <span class="card-icon">🧋</span>
-                <h3>Bubble Tea</h3>
-                <p>Refreshing, authentic boba drinks with customizable sweetness.</p>
-            </div>
-            <div class="card interactive-card">
-                <span class="card-icon">🍰</span>
-                <h3>Desserts</h3>
-                <p>Sweet, artisanal cakes and pastries baked freshly daily.</p>
-            </div>
-            <div class="card interactive-card">
-                <span class="card-icon">🥪</span>
-                <h3>Snacks</h3>
-                <p>Quick, delicious bites and warm sandwiches for anytime hunger</p>
-            </div>
-        </div>
-    </section>
+  <div class="glow-sphere sphere-top"></div>
+  <div class="glow-sphere sphere-bottom"></div>
 
-    <!--About & why choose us-->
-    <section id="about" class="section-container bg-light">
-        <div class="about-wrapper">
-            <div class="about-text text-center">
-                <h2 class="section-title">About Us</h2>
-                <p class="lead-text">We serve freshly brewed coffee, delicious bubble tea, tasty snacks, and homemade desserts in a warm and relaxing atmosphere designed to feel like home.</p>
-            </div>
+  <nav class="navbar">
+    <a href="index.html" class="logo luxury-title">MY<span>.</span>CAFÉ</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="faqs.html">FAQS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">BOOK TABLE</a>
+  </nav>
 
-            <div class="why-us-grid">
-                <div class="why-item">
-                    <h4>✨ Fresh Coffee</h4>
-                    <p>Made from premium organic coffee beans sourced responsibly every day.</p>
-                </div>
-                <div class="why-item">
-                    <h4>✨ Quality Boba</h4>
-                    <p>Fresh ingredients with authentic, delicious flavor choices.</p>
-                </div>
-                <div class="why-item">
-                    <h4>✨ Friendly Service</h4>
-                    <p>Our enthusiastic team is always ready to make your day brighter.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="hero-wrapper">
+    <div>
+      <div class="live-pill"><span class="pulse"></span> SLOW DRIP & ARTISANAL BAKERY</div>
+      <h1 class="hero-main-title luxury-title">
+        CRAFTED<br/>
+        <span class="gold-gradient-text">PATIENCE</span><br/>
+        IN EVERY CUP.
+      </h1>
+      <p class="hero-subtext">Experience slow-extracted decoctions, micro-batch roasts, and warm flaky crusts baked fresh every single morning.</p>
+      <div class="hero-btn-row">
+        <a href="menu.html" class="btn-glow-gold">EXPLORE MENU ↗</a>
+        <a href="gallery.html" class="btn-glass-hollow">WATCH REEL</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-number">100%</div><div class="stat-label">Estate Beans</div></div>
+        <div class="stat-line"></div>
+        <div><div class="stat-number">24hr</div><div class="stat-label">Cold Brew Steep</div></div>
+        <div class="stat-line"></div>
+        <div><div class="stat-number">4.9 ★</div><div class="stat-label">Guest Rating</div></div>
+      </div>
+    </div>
 
-    <!--Testimonials Section-->
-    <section class="section-contianer">
-        <h2 class="section-title">Customer Review</h2>
-        <div class="grid-3-col">
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"The coffee is incredible and the atmosphere is so relaxing! My absolute favourite weekend spot."</p>
-                <span class="reviewer">-Harsha</span>
-            </div>
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Best Bubble Tea in town hands down.Highly recommended the taro flavour!"</p>
-                <span class="reviewer">-Azrel</span>
-            </div>
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Delicious desserts and genuinely friendly staff.A staple neighborhood cafe."</p>
-                <span class="reviewer">-Vamika</span>
-            </div>
+    <div>
+      <div class="main-visual-card" data-tilt>
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80" alt="Specialty Brew" class="hero-img" />
+        <div class="floating-badge badge-top">
+          <span style="font-size: 1.4rem;">☕</span>
+          <div><strong style="color: #fff; font-size: 0.85rem;">Single Origin</strong><br/><small style="color: #9c9588; font-size: 0.7rem;">Coorg Arabica Roast</small></div>
         </div>
-    </section>
+        <div class="floating-badge badge-bottom">
+          <div style="background: #e5a93b; color: #080706; font-weight: 800; padding: 6px 10px; border-radius: 8px;">₹190</div>
+          <div><strong style="color: #fff; font-size: 0.85rem;">Nitro Cold Foam</strong><br/><small style="color: #9c9588; font-size: 0.7rem;">Daily Fresh Batch</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!--contact & footer section-->
-    <footer id="contact" class="footer">
-        <div class="footer-content">
-            <h3>Contact Us</h3>
-            <p>📍 Pollachi, TamilNadu</p>
-            <p>📞 +91 9876543210</p>
-            <p>✉️ cafeshop@hotmail.com</p>
-            <button class="btn-secondary">Contact Now</button>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Cafe Shop. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      SLOW EXTRACTED DECOCTION • WILD SOURDOUGH • HANDMADE CROISSANTS • NITRO COLD BREW • SLOW EXTRACTED DECOCTION • WILD SOURDOUGH • HANDMADE CROISSANTS • NITRO COLD BREW •
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 My Café. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

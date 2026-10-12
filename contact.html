@@ -1,34 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Cafe Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Reservations | MY.CAFÉ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-wrap { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; position: relative; z-index: 2; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; margin-top: 3rem; }
+    .info-tile { padding: 1.5rem; border-radius: 18px; margin-bottom: 1.25rem; }
+    .info-tile h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 0.5rem; }
+    .info-tile p { color: var(--text-main); font-size: 0.95rem; line-height: 1.6; }
+    .form-panel { padding: 2.5rem; border-radius: 24px; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem; }
+    .form-input {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      background: rgba(8, 7, 6, 0.75);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .form-input:focus { border-color: var(--accent-gold); }
+    @media (max-width: 850px) { .contact-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">☕ Cafe Shop</div>
-        <nav><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About & Careers</a><a href="gallery.html">Gallery</a><a href="faqs.html">FAQs</a><a href="contact.html" class="active">Contact</a></nav>
-    </header>
 
-    <section class="section-container">
-        <h2 class="section-title">Get in Touch</h2>
-        <div class="grid-2-col" style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-            <div>
-                <h3>Find Us</h3>
-                <p style="margin: 15px 0;">📍 Pollachi, Tamil Nadu</p>
-                <p style="margin: 15px 0;">📞 +91 9876543210</p>
-                <p style="margin: 15px 0;">✉️ cafeshop@hotmail.com</p>
-            </div>
-            <form style="display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" placeholder="Your Name" style="padding: 12px; border: 1px solid #ddd; border-radius: 6px;">
-                <input type="email" placeholder="Your Email" style="padding: 12px; border: 1px solid #ddd; border-radius: 6px;">
-                <textarea placeholder="Your Message" rows="5" style="padding: 12px; border: 1px solid #ddd; border-radius: 6px;"></textarea>
-                <button type="submit" class="btn-primary" style="align-self: flex-start;">Send Message</button>
-            </form>
+  <div class="glow-sphere sphere-bottom"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo luxury-title">MY<span>.</span>CAFÉ</a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="faqs.html">FAQS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html" class="active">CONTACT</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">BOOK TABLE</a>
+  </nav>
+
+  <div class="contact-wrap">
+    <div style="text-align: center;">
+      <div class="live-pill"><span class="pulse"></span> CONNECT & RESERVE</div>
+      <h1 class="luxury-title" style="font-size: 3rem;">FIND YOUR CORNER</h1>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="glass-card info-tile">
+          <h4>Address</h4>
+          <p>12/4 Artisanal Lane, Heritage Block,<br/>Opposite Green Boulevard</p>
         </div>
-    </section>
+        <div class="glass-card info-tile">
+          <h4>Hours of Pour</h4>
+          <p>Tuesday — Sunday: 07:00 AM — 10:00 PM<br/>Mondays: Closed for Roasting</p>
+        </div>
+        <div class="glass-card info-tile">
+          <h4>Direct Reach</h4>
+          <p>hello@mycafe.in<br/>+91 98765 43210</p>
+        </div>
+      </div>
+
+      <div class="glass-card form-panel">
+        <form onsubmit="event.preventDefault(); alert('Reservation requested! We will reach out shortly.');">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-input" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Phone / Email</label>
+            <input type="text" class="form-input" placeholder="Contact number or email" required />
+          </div>
+          <div class="form-group">
+            <label>Reservation Note</label>
+            <textarea class="form-input" rows="3" placeholder="Number of guests, date, and preferred time..."></textarea>
+          </div>
+          <button type="submit" class="btn-glow-gold" style="width: 100%;">CONFIRM RESERVATION</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 My Café. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
